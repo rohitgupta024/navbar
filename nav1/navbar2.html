@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Responsive Navbar</title>
+	<link rel="stylesheet" type="text/css" href="navbar2.css">
+</head>
+<body>
+	<div class="navbar">
+		<a href="#" class="nav-heading">CodeMan Responsive Navbar</a>
+		<ul class="nav">
+			<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+		</ul>
+		<div class="dots">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const dots = document.querySelector('.dots');
+		const navbar = document.querySelector(".nav");
+        const navitem = document.querySelectorAll('.nav-item');
+
+
+		dots.addEventListener("click", respNav);
+
+		function respNav(){
+            
+			dots.classList.toggle("active");
+			navbar.classList.toggle("active")
+		}
+	</script>
+</body>
+</html>
