@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav {
+   
+    background: #111;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+   
+}
+
+li {
+    list-style: none;
+    /* //wait */
+    margin-left: 30px;
+    
+    /* //explain y we taking here margn-left  */
+    position: relative;
+ 
+}
+
+.nav-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+}
+
+h4{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+ul {
+    display: flex;
+    /* background-color: peru; */
+    /* width: 30%; */
+   /* now tell dem  */
+    justify-content: space-around;
+    align-items: center;
+
+}
+ul li a {
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: normal;
+ 
+}
+ul li a:hover{
+    position: relative;
+    
+}
+ul li a:hover::after{
+    
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: .12rem;
+    left: 0;
+    top: 2rem;
+    background: #fff;
+}
+.active::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: .12rem;
+    left: 0;
+    top: 2rem;
+    background: #fff;
+}
+
+
+h2{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+
+}
+.one{
+    background: whitesmoke;
+    height: 100vh;
+    color: #111;
+}
+.two {
+    background: #FAF562;
+}
+.three{
+    background: #E4FBFF
+}
+.four{
+    background: #B346FF
+}
+.two,
+.three,
+.four{
+    height: 100vh;
+}
+.burger{
+    cursor: pointer;
+    display: none;
+}
+.burger div{
+    width: 23px;
+    height: 2.5px;
+    background-color: whitesmoke;
+    margin: 5px;
+   
+}
+
+@media screen and (max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: fixed;
+         width: 60%;
+        top: 10vh;
+        height: 90vh;
+        background: #111;
+        display: flex;
+        right: -100%;
+        z-index: 1000;
+        align-items: center;
+        flex-direction: column;
+    
+      
+        /* z-index: 10000; */
+        transition: all .5s ease;
+       
+
+
+    }
+    
+    .burger{
+        display: block;
+    }
+}
+
+.nav-show{
+    right: 0;
+}
